@@ -1,0 +1,7 @@
+"table_name","column_name","foreign_table_name","foreign_column_name"
+fact_sales,customer_key,dim_customer,customer_key
+fact_sales,product_key,dim_product,product_key
+fact_sales,geography_key,dim_geography,geography_key
+fact_sales,ship_mode_key,dim_ship_mode,ship_mode_key
+fact_sales,order_date_key,dim_date,date_key
+fact_sales,ship_date_key,dim_date,date_key
