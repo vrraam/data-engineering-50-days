@@ -1,0 +1,9 @@
+
+/q
+
+
+cd ..
+chmod +x data
+_pipeline.sh
+./data
+_pipeline.sh

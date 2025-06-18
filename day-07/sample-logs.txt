@@ -1,0 +1,12 @@
+2025-01-15 10:30:01 INFO User login successful - user
+id:12345
+_
+2025-01-15 10:30:15 ERROR Database connection failed - timeout
+2025-01-15 10:30:22 INFO Data processing started - batch
+id:67890
+_
+2025-01-15 10:30:45 WARN Memory usage high - 85% utilized
+2025-01-15 10:31:01 ERROR Payment processing failed - amount:$125.50
+2025-01-15 10:31:15 INFO User logout - user
+id:12345
+_

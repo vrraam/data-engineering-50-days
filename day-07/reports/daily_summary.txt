@@ -1,0 +1,2 @@
+Total completed transactions: 3
+Total revenue: $1329.97

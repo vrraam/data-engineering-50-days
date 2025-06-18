@@ -1,0 +1,6 @@
+date,transaction_id,customer_id,product,amount,status
+2025-01-15,TXN001,CUST001,Laptop,999.99,completed
+2025-01-15,TXN002,CUST002,Mouse,29.99,completed
+2025-01-15,TXN003,CUST003,Keyboard,79.99,failed
+2025-01-15,TXN004,CUST001,Monitor,299.99,completed
+2025-01-15,TXN005,CUST004,Headphones,149.99,pending

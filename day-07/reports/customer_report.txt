@@ -1,0 +1,8 @@
+=== Customer Analysis Report ===
+Generated: Tue Jun 17 22:13:12 CDT 2025
+
+Customers by city:
+   1 Chicago
+   1 Houston
+   1 Los Angeles
+   1 New York
