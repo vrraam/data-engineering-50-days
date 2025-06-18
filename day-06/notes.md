@@ -15,4 +15,4 @@
 ## Tomorrow's Goals
 - Learn Linux fundamentals for cloud server management
 - Connect command-line skills to cloud infrastructure
-- Prepare for data pipeline automation
+- Prepare for data pipeline automation.
