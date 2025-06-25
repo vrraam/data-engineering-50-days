@@ -1,0 +1,101 @@
+ID,Name,Email,Age,Purchase_Amount,Purchase_Date,Customer_Segment,Age_Group
+1,Customer_1,customer1@email.com,21,55.5,2024-01-01,Regular,Young
+2,Customer_2,customer2@email.com,22,61.0,2024-01-01,Regular,Young
+3,Customer_3,customer3@email.com,23,66.5,2024-01-01,Regular,Young
+4,Customer_4,customer4@email.com,24,72.0,2024-01-01,Regular,Young
+5,Customer_5,customer5@email.com,25,77.5,2024-01-01,Regular,Young
+6,Customer_6,customer6@email.com,26,83.0,2024-01-01,Regular,Young
+7,Customer_7,customer7@email.com,27,88.5,2024-01-01,Regular,Young
+8,Customer_8,customer8@email.com,28,94.0,2024-01-01,Regular,Young
+9,Customer_9,customer9@email.com,29,99.5,2024-01-01,Regular,Young
+10,Customer_10,customer10@email.com,30,105.0,2024-01-01,Regular,Middle
+11,Customer_11,customer11@email.com,31,110.5,2024-01-01,Regular,Middle
+12,Customer_12,customer12@email.com,32,116.0,2024-01-01,Regular,Middle
+13,Customer_13,customer13@email.com,33,121.5,2024-01-01,Regular,Middle
+14,Customer_14,customer14@email.com,34,127.0,2024-01-01,Regular,Middle
+15,Customer_15,customer15@email.com,35,132.5,2024-01-01,Regular,Middle
+16,Customer_16,customer16@email.com,36,138.0,2024-01-01,Regular,Middle
+17,Customer_17,customer17@email.com,37,143.5,2024-01-01,Regular,Middle
+18,Customer_18,customer18@email.com,38,149.0,2024-01-01,Regular,Middle
+19,Customer_19,customer19@email.com,39,154.5,2024-01-01,Regular,Middle
+20,Customer_20,customer20@email.com,40,160.0,2024-01-01,Regular,Middle
+21,Customer_21,customer21@email.com,41,165.5,2024-01-01,Regular,Middle
+22,Customer_22,customer22@email.com,42,171.0,2024-01-01,Regular,Middle
+23,Customer_23,customer23@email.com,43,176.5,2024-01-01,Regular,Middle
+24,Customer_24,customer24@email.com,44,182.0,2024-01-01,Regular,Middle
+25,Customer_25,customer25@email.com,45,187.5,2024-01-01,Regular,Middle
+26,Customer_26,customer26@email.com,46,193.0,2024-01-01,Regular,Middle
+27,Customer_27,customer27@email.com,47,198.5,2024-01-01,Regular,Middle
+28,Customer_28,customer28@email.com,48,204.0,2024-01-01,Regular,Middle
+29,Customer_29,customer29@email.com,49,209.5,2024-01-01,Regular,Middle
+30,Customer_30,customer30@email.com,50,215.0,2024-01-01,Regular,Senior
+31,Customer_31,customer31@email.com,51,220.5,2024-01-01,Regular,Senior
+32,Customer_32,customer32@email.com,52,226.0,2024-01-01,Regular,Senior
+33,Customer_33,customer33@email.com,53,231.5,2024-01-01,Regular,Senior
+34,Customer_34,customer34@email.com,54,237.0,2024-01-01,Regular,Senior
+35,Customer_35,customer35@email.com,55,242.5,2024-01-01,Regular,Senior
+36,Customer_36,customer36@email.com,56,248.0,2024-01-01,Regular,Senior
+37,Customer_37,customer37@email.com,57,253.5,2024-01-01,Regular,Senior
+38,Customer_38,customer38@email.com,58,259.0,2024-01-01,Regular,Senior
+39,Customer_39,customer39@email.com,59,264.5,2024-01-01,Regular,Senior
+40,Customer_40,customer40@email.com,60,270.0,2024-01-01,Regular,Senior
+41,Customer_41,customer41@email.com,61,275.5,2024-01-01,Regular,Senior
+42,Customer_42,customer42@email.com,62,281.0,2024-01-01,Regular,Senior
+43,Customer_43,customer43@email.com,63,286.5,2024-01-01,Regular,Senior
+44,Customer_44,customer44@email.com,64,292.0,2024-01-01,Regular,Senior
+45,Customer_45,customer45@email.com,65,297.5,2024-01-01,Regular,Senior
+46,Customer_46,customer46@email.com,66,303.0,2024-01-01,High Value,Senior
+47,Customer_47,customer47@email.com,67,308.5,2024-01-01,High Value,Senior
+48,Customer_48,customer48@email.com,68,314.0,2024-01-01,High Value,Senior
+49,Customer_49,customer49@email.com,69,319.5,2024-01-01,High Value,Senior
+50,Customer_50,customer50@email.com,20,325.0,2024-01-01,High Value,Young
+51,Customer_51,customer51@email.com,21,330.5,2024-01-01,High Value,Young
+52,Customer_52,customer52@email.com,22,336.0,2024-01-01,High Value,Young
+53,Customer_53,customer53@email.com,23,341.5,2024-01-01,High Value,Young
+54,Customer_54,customer54@email.com,24,347.0,2024-01-01,High Value,Young
+55,Customer_55,customer55@email.com,25,352.5,2024-01-01,High Value,Young
+56,Customer_56,customer56@email.com,26,358.0,2024-01-01,High Value,Young
+57,Customer_57,customer57@email.com,27,363.5,2024-01-01,High Value,Young
+58,Customer_58,customer58@email.com,28,369.0,2024-01-01,High Value,Young
+59,Customer_59,customer59@email.com,29,374.5,2024-01-01,High Value,Young
+60,Customer_60,customer60@email.com,30,380.0,2024-01-01,High Value,Middle
+61,Customer_61,customer61@email.com,31,385.5,2024-01-01,High Value,Middle
+62,Customer_62,customer62@email.com,32,391.0,2024-01-01,High Value,Middle
+63,Customer_63,customer63@email.com,33,396.5,2024-01-01,High Value,Middle
+64,Customer_64,customer64@email.com,34,402.0,2024-01-01,High Value,Middle
+65,Customer_65,customer65@email.com,35,407.5,2024-01-01,High Value,Middle
+66,Customer_66,customer66@email.com,36,413.0,2024-01-01,High Value,Middle
+67,Customer_67,customer67@email.com,37,418.5,2024-01-01,High Value,Middle
+68,Customer_68,customer68@email.com,38,424.0,2024-01-01,High Value,Middle
+69,Customer_69,customer69@email.com,39,429.5,2024-01-01,High Value,Middle
+70,Customer_70,customer70@email.com,40,435.0,2024-01-01,High Value,Middle
+71,Customer_71,customer71@email.com,41,440.5,2024-01-01,High Value,Middle
+72,Customer_72,customer72@email.com,42,446.0,2024-01-01,High Value,Middle
+73,Customer_73,customer73@email.com,43,451.5,2024-01-01,High Value,Middle
+74,Customer_74,customer74@email.com,44,457.0,2024-01-01,High Value,Middle
+75,Customer_75,customer75@email.com,45,462.5,2024-01-01,High Value,Middle
+76,Customer_76,customer76@email.com,46,468.0,2024-01-01,High Value,Middle
+77,Customer_77,customer77@email.com,47,473.5,2024-01-01,High Value,Middle
+78,Customer_78,customer78@email.com,48,479.0,2024-01-01,High Value,Middle
+79,Customer_79,customer79@email.com,49,484.5,2024-01-01,High Value,Middle
+80,Customer_80,customer80@email.com,50,490.0,2024-01-01,High Value,Senior
+81,Customer_81,customer81@email.com,51,495.5,2024-01-01,High Value,Senior
+82,Customer_82,customer82@email.com,52,501.0,2024-01-01,High Value,Senior
+83,Customer_83,customer83@email.com,53,506.5,2024-01-01,High Value,Senior
+84,Customer_84,customer84@email.com,54,512.0,2024-01-01,High Value,Senior
+85,Customer_85,customer85@email.com,55,517.5,2024-01-01,High Value,Senior
+86,Customer_86,customer86@email.com,56,523.0,2024-01-01,High Value,Senior
+87,Customer_87,customer87@email.com,57,528.5,2024-01-01,High Value,Senior
+88,Customer_88,customer88@email.com,58,534.0,2024-01-01,High Value,Senior
+89,Customer_89,customer89@email.com,59,539.5,2024-01-01,High Value,Senior
+90,Customer_90,customer90@email.com,60,545.0,2024-01-01,High Value,Senior
+91,Customer_91,customer91@email.com,61,550.5,2024-01-01,High Value,Senior
+92,Customer_92,customer92@email.com,62,556.0,2024-01-01,High Value,Senior
+93,Customer_93,customer93@email.com,63,561.5,2024-01-01,High Value,Senior
+94,Customer_94,customer94@email.com,64,567.0,2024-01-01,High Value,Senior
+95,Customer_95,customer95@email.com,65,572.5,2024-01-01,High Value,Senior
+96,Customer_96,customer96@email.com,66,578.0,2024-01-01,High Value,Senior
+97,Customer_97,customer97@email.com,67,583.5,2024-01-01,High Value,Senior
+98,Customer_98,customer98@email.com,68,589.0,2024-01-01,High Value,Senior
+99,Customer_99,customer99@email.com,69,594.5,2024-01-01,High Value,Senior
+100,Customer_100,customer100@email.com,20,600.0,2024-01-01,High Value,Young

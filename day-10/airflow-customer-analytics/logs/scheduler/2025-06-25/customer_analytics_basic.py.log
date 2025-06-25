@@ -1,0 +1,139 @@
+[2025-06-25T02:59:01.790+0000] {processor.py:157} INFO - Started process (PID=375) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T02:59:01.791+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T02:59:01.792+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:01.792+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T02:59:01.841+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T02:59:02.053+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.052+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-06-25T02:59:02.058+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.058+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-06-25T02:59:02.061+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.061+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-06-25T02:59:02.061+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.061+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:customer_analytics_basic' as access control is unset.
+[2025-06-25T02:59:02.061+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.061+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T02:59:02.067+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.067+0000] {dag.py:2937} INFO - Creating ORM DAG for customer_analytics_basic
+[2025-06-25T02:59:02.077+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:02.077+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T02:59:02.077330+00:00, run_after=2025-06-25T02:59:02.077330+00:00
+[2025-06-25T02:59:02.091+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.304 seconds
+[2025-06-25T02:59:32.568+0000] {processor.py:157} INFO - Started process (PID=404) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T02:59:32.569+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T02:59:32.571+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:32.570+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T02:59:32.595+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T02:59:32.644+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:32.644+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T02:59:32.669+0000] {logging_mixin.py:151} INFO - [2025-06-25T02:59:32.669+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T02:59:32.667549+00:00, run_after=2025-06-25T02:59:32.667549+00:00
+[2025-06-25T02:59:32.682+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.118 seconds
+[2025-06-25T03:00:03.127+0000] {processor.py:157} INFO - Started process (PID=433) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:00:03.129+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:00:03.130+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:00:03.130+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:00:03.148+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:00:03.177+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:00:03.177+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:00:03.192+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:00:03.191+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:00:03.191690+00:00, run_after=2025-06-25T03:00:03.191690+00:00
+[2025-06-25T03:00:03.204+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.079 seconds
+[2025-06-25T03:00:33.742+0000] {processor.py:157} INFO - Started process (PID=454) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:00:33.744+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:00:33.745+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:00:33.744+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:00:33.769+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:00:33.798+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:00:33.797+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:00:33.817+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:00:33.817+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:00:33.817296+00:00, run_after=2025-06-25T03:00:33.817296+00:00
+[2025-06-25T03:00:33.830+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.093 seconds
+[2025-06-25T03:01:04.530+0000] {processor.py:157} INFO - Started process (PID=483) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:01:04.532+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:01:04.534+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:01:04.533+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:01:04.559+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:01:04.590+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:01:04.590+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:01:04.606+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:01:04.606+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:01:04.605978+00:00, run_after=2025-06-25T03:01:04.605978+00:00
+[2025-06-25T03:01:04.625+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.098 seconds
+[2025-06-25T03:01:35.169+0000] {processor.py:157} INFO - Started process (PID=519) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:01:35.171+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:01:35.175+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:01:35.173+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:01:35.196+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:01:35.232+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:01:35.231+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:01:35.252+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:01:35.252+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:01:35.252025+00:00, run_after=2025-06-25T03:01:35.252025+00:00
+[2025-06-25T03:01:35.263+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.099 seconds
+[2025-06-25T03:02:05.675+0000] {processor.py:157} INFO - Started process (PID=540) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:05.676+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:02:05.677+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:05.677+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:05.698+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:05.728+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:05.728+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:02:05.749+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:05.749+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:02:05.748725+00:00, run_after=2025-06-25T03:02:05.748725+00:00
+[2025-06-25T03:02:05.762+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.090 seconds
+[2025-06-25T03:02:36.210+0000] {processor.py:157} INFO - Started process (PID=569) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:36.213+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:02:36.214+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:36.213+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:36.241+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:36.272+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:36.272+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:02:36.289+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:36.289+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:02:36.289245+00:00, run_after=2025-06-25T03:02:36.289245+00:00
+[2025-06-25T03:02:36.300+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.094 seconds
+[2025-06-25T03:02:59.620+0000] {processor.py:157} INFO - Started process (PID=590) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:59.622+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:02:59.623+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:59.623+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:59.643+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:02:59.722+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:59.722+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:customer_analytics_basic' as access control is unset.
+[2025-06-25T03:02:59.723+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:59.723+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:02:59.733+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:02:59.733+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:02:59.733655+00:00, run_after=2025-06-25T03:02:59.733655+00:00
+[2025-06-25T03:02:59.744+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.131 seconds
+[2025-06-25T03:03:29.932+0000] {processor.py:157} INFO - Started process (PID=626) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:03:29.934+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:03:29.936+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:03:29.935+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:03:29.959+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:03:29.983+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:03:29.983+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:03:29.996+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:03:29.996+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:03:29.996600+00:00, run_after=2025-06-25T03:03:29.996600+00:00
+[2025-06-25T03:03:30.005+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.079 seconds
+[2025-06-25T03:04:00.321+0000] {processor.py:157} INFO - Started process (PID=655) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:04:00.322+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:04:00.323+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:04:00.323+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:04:00.338+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:04:00.361+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:04:00.360+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:04:00.378+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:04:00.378+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-24T03:04:00.377776+00:00, run_after=2025-06-25T03:04:00.377776+00:00
+[2025-06-25T03:04:00.386+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.071 seconds
+[2025-06-25T03:04:30.748+0000] {processor.py:157} INFO - Started process (PID=678) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:04:30.751+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:04:30.752+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:04:30.752+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:04:30.787+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:04:30.864+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:04:30.863+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:04:30.912+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:04:30.912+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:04:30.930+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.195 seconds
+[2025-06-25T03:05:01.343+0000] {processor.py:157} INFO - Started process (PID=729) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:05:01.345+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:05:01.347+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:05:01.346+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:05:01.371+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:05:01.406+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:05:01.405+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:05:01.422+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:05:01.422+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:05:01.432+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.097 seconds
+[2025-06-25T03:05:31.633+0000] {processor.py:157} INFO - Started process (PID=758) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:05:31.635+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:05:31.636+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:05:31.636+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:05:31.652+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:05:31.682+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:05:31.682+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:05:31.696+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:05:31.696+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:05:31.706+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.078 seconds
+[2025-06-25T03:06:02.002+0000] {processor.py:157} INFO - Started process (PID=785) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:06:02.004+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:06:02.005+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:06:02.004+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:06:02.024+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:06:02.050+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:06:02.049+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:06:02.071+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:06:02.070+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:06:02.082+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.086 seconds
+[2025-06-25T03:06:33.095+0000] {processor.py:157} INFO - Started process (PID=808) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:06:33.097+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:06:33.098+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:06:33.097+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:06:33.124+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:06:33.163+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:06:33.163+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:06:33.180+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:06:33.180+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:06:33.194+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.106 seconds
+[2025-06-25T03:07:03.438+0000] {processor.py:157} INFO - Started process (PID=837) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:07:03.442+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:07:03.444+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:07:03.443+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:07:03.466+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:07:03.498+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:07:03.498+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:07:03.513+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:07:03.513+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:07:03.523+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.095 seconds
+[2025-06-25T03:07:33.862+0000] {processor.py:157} INFO - Started process (PID=867) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:07:33.864+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:07:33.865+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:07:33.864+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:07:33.880+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:07:33.902+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:07:33.902+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:07:33.917+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:07:33.917+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:07:33.926+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.067 seconds
+[2025-06-25T03:08:04.200+0000] {processor.py:157} INFO - Started process (PID=888) to work on /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:08:04.202+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_analytics_basic.py for tasks to queue
+[2025-06-25T03:08:04.203+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:08:04.203+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:08:04.228+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_analytics_basic']) retrieved from /opt/airflow/dags/customer_analytics_basic.py
+[2025-06-25T03:08:04.265+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:08:04.265+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-06-25T03:08:04.280+0000] {logging_mixin.py:151} INFO - [2025-06-25T03:08:04.280+0000] {dag.py:3696} INFO - Setting next_dagrun for customer_analytics_basic to 2025-06-25T03:04:00.377776+00:00, run_after=2025-06-26T03:04:00.377776+00:00
+[2025-06-25T03:08:04.289+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_analytics_basic.py took 0.095 seconds

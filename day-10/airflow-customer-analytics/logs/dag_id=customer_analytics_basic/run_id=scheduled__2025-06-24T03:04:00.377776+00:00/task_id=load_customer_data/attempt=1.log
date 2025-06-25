@@ -1,0 +1,17 @@
+[2025-06-25T03:04:35.898+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_analytics_basic.load_customer_data scheduled__2025-06-24T03:04:00.377776+00:00 [queued]>
+[2025-06-25T03:04:35.903+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_analytics_basic.load_customer_data scheduled__2025-06-24T03:04:00.377776+00:00 [queued]>
+[2025-06-25T03:04:35.903+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-06-25T03:04:35.911+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_customer_data> on 2025-06-24 03:04:00.377776+00:00
+[2025-06-25T03:04:35.914+0000] {standard_task_runner.py:57} INFO - Started process 703 to run task
+[2025-06-25T03:04:35.916+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_analytics_basic', 'load_customer_data', 'scheduled__2025-06-24T03:04:00.377776+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/customer_analytics_basic.py', '--cfg-path', '/tmp/tmpdew0y_g6']
+[2025-06-25T03:04:35.920+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask load_customer_data
+[2025-06-25T03:04:36.017+0000] {task_command.py:415} INFO - Running <TaskInstance: customer_analytics_basic.load_customer_data scheduled__2025-06-24T03:04:00.377776+00:00 [running]> on host 8a464cc5fc3f
+[2025-06-25T03:04:36.096+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering-team' AIRFLOW_CTX_DAG_ID='customer_analytics_basic' AIRFLOW_CTX_TASK_ID='load_customer_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-24T03:04:00.377776+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-24T03:04:00.377776+00:00'
+[2025-06-25T03:04:36.409+0000] {logging_mixin.py:151} INFO - 💾 Starting data loading...
+[2025-06-25T03:04:36.413+0000] {logging_mixin.py:151} INFO - 📈 Processed 100 customers
+[2025-06-25T03:04:36.413+0000] {logging_mixin.py:151} INFO - 💰 Total revenue: $32,775.00
+[2025-06-25T03:04:36.413+0000] {logging_mixin.py:151} INFO - ✅ Data loading completed!
+[2025-06-25T03:04:36.414+0000] {python.py:194} INFO - Done. Returned value was: True
+[2025-06-25T03:04:36.430+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=customer_analytics_basic, task_id=load_customer_data, execution_date=20250624T030400, start_date=20250625T030435, end_date=20250625T030436
+[2025-06-25T03:04:36.471+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-06-25T03:04:36.496+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
