@@ -11,7 +11,7 @@ from airflow.operators.bash import BashOperator      # Updated import
 
 # Default arguments for all tasks
 default_args = {
-    'owner': 'data-engineering-team',
+    'owner': 'data-engineering-team', 
     'depends_on_past': False,
     'start_date': datetime(2024, 1, 1),
     'email_on_failure': False,
