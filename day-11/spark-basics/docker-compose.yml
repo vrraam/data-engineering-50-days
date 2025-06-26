@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  # Spark Master
+  spark-master:
+    image: bitnami/spark:3.4.1
+    container_name: spark-master
+    hostname: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - "8080:8080"  # Spark Master Web UI
+      - "7077:7077"  # Spark Master Port
+    volumes:
+      - ./data:/opt/bitnami/spark/data
+      - ./spark-apps:/opt/bitnami/spark/apps
+      - ./notebooks:/opt/bitnami/spark/notebooks
+
+  # Spark Worker 1
+  spark-worker-1:
+    image: bitnami/spark:3.4.1
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=2g
+      - SPARK_WORKER_CORES=2
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./data:/opt/bitnami/spark/data
+      - ./spark-apps:/opt/bitnami/spark/apps
+    depends_on:
+      - spark-master
+
+  # Spark Worker 2
+  spark-worker-2:
+    image: bitnami/spark:3.4.1
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=2g
+      - SPARK_WORKER_CORES=2
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./data:/opt/bitnami/spark/data
+      - ./spark-apps:/opt/bitnami/spark/apps
+    depends_on:
+      - spark-master
+
+  # Jupyter Notebook
+  jupyter-spark:
+    image: jupyter/pyspark-notebook:latest
+    container_name: jupyter-spark
+    environment:
+      - JUPYTER_TOKEN=spark123
+      - SPARK_MASTER=spark://spark-master:7077
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/data
+      - ./spark-apps:/home/jovyan/apps
+    depends_on:
+      - spark-master
+
+  # PostgreSQL (optional, for saving results)
+  postgres:
+    image: postgres:15-alpine
+    container_name: spark-postgres
+    environment:
+      POSTGRES_DB: spark_results
+      POSTGRES_USER: spark_user
+      POSTGRES_PASSWORD: spark_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
