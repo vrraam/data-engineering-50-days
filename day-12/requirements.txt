@@ -1,0 +1,9 @@
+
+# MongoDB and Data Processing (Essential only)
+pymongo>=4.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional - only install if needed for Jupyter
+# jupyter
+# ipykernel
