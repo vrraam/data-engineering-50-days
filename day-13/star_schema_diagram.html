@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Data Warehouse - Star Schema</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .schema-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+            margin: 40px 0;
+            align-items: center;
+        }
+        
+        .dimension {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .dimension:hover {
+            transform: translateY(-5px);
+        }
+        
+        .fact {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            grid-column: 2;
+            grid-row: 2;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transform: scale(1.1);
+        }
+        
+        .table-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .field-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .field-list li {
+            padding: 3px 0;
+            font-size: 0.9em;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .key-field {
+            font-weight: bold;
+            color: #ffeaa7;
+        }
+        
+        .dim-customer { grid-column: 1; grid-row: 1; }
+        .dim-product { grid-column: 3; grid-row: 1; }
+        .dim-store { grid-column: 1; grid-row: 3; }
+        .dim-date { grid-column: 3; grid-row: 3; }
+        
+        .connection {
+            position: relative;
+        }
+        
+        .connection::before {
+            content: '';
+            position: absolute;
+            background: #2d3436;
+            z-index: -1;
+        }
+        
+        .info-section {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #6c5ce7;
+        }
+        
+        .info-card h3 {
+            color: #2d3436;
+            margin-top: 0;
+        }
+        
+        .benefits {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .benefits li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00b894;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏪 Retail Data Warehouse - Star Schema</h1>
+        
+        <div class="schema-container">
+            <!-- Customer Dimension -->
+            <div class="dimension dim-customer">
+                <div class="table-title">👥 Customer Dimension</div>
+                <ul class="field-list">
+                    <li class="key-field">customer_key (PK)</li>
+                    <li class="key-field">customer_id (BK)</li>
+                    <li>first_name</li>
+                    <li>last_name</li>
+                    <li>email</li>
+                    <li>phone</li>
+                    <li>gender</li>
+                    <li>city</li>
+                    <li>state</li>
+                    <li>customer_segment</li>
+                    <li>is_current (SCD)</li>
+                </ul>
+            </div>
+            
+            <!-- Product Dimension -->
+            <div class="dimension dim-product">
+                <div class="table-title">📱 Product Dimension</div>
+                <ul class="field-list">
+                    <li class="key-field">product_key (PK)</li>
+                    <li class="key-field">product_id (BK)</li>
+                    <li>product_name</li>
+                    <li>category_l1</li>
+                    <li>category_l2</li>
+                    <li>brand</li>
+                    <li>list_price</li>
+                    <li>standard_cost</li>
+                    <li>launch_date</li>
+                    <li>is_current (SCD)</li>
+                </ul>
+            </div>
+            
+            <!-- Sales Fact Table (Center) -->
+            <div class="fact">
+                <div class="table-title">💰 Sales Fact Table</div>
+                <ul class="field-list">
+                    <li class="key-field">sales_key (PK)</li>
+                    <li class="key-field">date_key (FK)</li>
+                    <li class="key-field">customer_key (FK)</li>
+                    <li class="key-field">product_key (FK)</li>
+                    <li class="key-field">store_key (FK)</li>
+                    <li>transaction_id</li>
+                    <li>quantity_sold</li>
+                    <li>unit_price</li>
+                    <li>discount_amount</li>
+                    <li>gross_amount</li>
+                    <li>net_amount</li>
+                    <li>payment_method</li>
+                    <li>promotion_code</li>
+                </ul>
+            </div>
+            
+            <!-- Store Dimension -->
+            <div class="dimension dim-store">
+                <div class="table-title">🏪 Store Dimension</div>
+                <ul class="field-list">
+                    <li class="key-field">store_key (PK)</li>
+                    <li class="key-field">store_id (BK)</li>
+                    <li>store_name</li>
+                    <li>store_type</li>
+                    <li>city</li>
+                    <li>state</li>
+                    <li>region</li>
+                    <li>store_size_sqft</li>
+                    <li>store_manager</li>
+                    <li>opening_date</li>
+                </ul>
+            </div>
+            
+            <!-- Date Dimension -->
+            <div class="dimension dim-date">
+                <div class="table-title">📅 Date Dimension</div>
+                <ul class="field-list">
+                    <li class="key-field">date_key (PK)</li>
+                    <li>date_actual</li>
+                    <li>day_of_week</li>
+                    <li>day_name</li>
+                    <li>month_number</li>
+                    <li>month_name</li>
+                    <li>quarter_number</li>
+                    <li>year_number</li>
+                    <li>is_weekend</li>
+                    <li>fiscal_year</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-card">
+                <h3>🎯 Key Design Principles</h3>
+                <ul class="benefits">
+                    <li><strong>Star Schema:</strong> Central fact table surrounded by dimension tables</li>
+                    <li><strong>Grain:</strong> One row per transaction line item</li>
+                    <li><strong>Surrogate Keys:</strong> Auto-generated primary keys for dimensions</li>
+                    <li><strong>Business Keys:</strong> Natural keys from source systems</li>
+                    <li><strong>SCD Type 2:</strong> Track historical changes in dimensions</li>
+                    <li><strong>Conformed Dimensions:</strong> Shared across multiple fact tables</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>📊 Analytics Benefits</h3>
+                <ul class="benefits">
+                    <li><strong>Fast Queries:</strong> Optimized for analytical workloads</li>
+                    <li><strong>Business Friendly:</strong> Easy to understand structure</li>
+                    <li><strong>Historical Data:</strong> Track changes over time</li>
+                    <li><strong>Aggregations:</strong> Pre-calculated summary tables</li>
+                    <li><strong>Scalability:</strong> Efficient for large datasets</li>
+                    <li><strong>Flexibility:</strong> Support various analysis patterns</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
