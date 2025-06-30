@@ -1,0 +1,29 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  postgres-dw:
+    image: postgres:15
+    container_name: retail-warehouse
+    environment:
+      POSTGRES_DB: retail_dw
+      POSTGRES_USER: dw_admin
+      POSTGRES_PASSWORD: warehouse123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dw_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d/
+    
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin-dw
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@warehouse.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres-dw
+
+volumes:
+  postgres_dw_data:
