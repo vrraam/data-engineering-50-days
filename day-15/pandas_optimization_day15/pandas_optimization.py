@@ -457,3 +457,134 @@ for key, value in summary.items():
 
 print(f"\n📈 Performance Profile Table:")
 print(profile_df[['operation', 'execution_time', 'memory_delta_mb']].round(4))
+
+
+# === STEP 8: CHUNKED PROCESSING FOR LARGE DATASETS ===
+print("\n" + "="*60)
+print("=== CHUNKED PROCESSING: UNLIMITED DATA SIZE ===")
+print("="*60)
+
+def demonstrate_chunked_processing(file_path='marketing_campaign.csv', chunk_size=500):
+    """
+    Process large datasets in memory-efficient chunks
+    """
+    print(f"🗂️ Processing data in chunks of {chunk_size} rows...")
+    
+    # Initialize aggregation variables
+    total_customers = 0
+    total_income = 0
+    education_counts = {}
+    segment_stats = {'Premium': 0, 'High-Income': 0, 'Middle-Income': 0, 'Budget': 0}
+    
+    chunk_summaries = []
+    
+    # Process data in chunks
+    chunk_num = 0
+    for chunk in pd.read_csv(file_path, sep=None, engine='python', chunksize=chunk_size):
+        chunk_num += 1
+        start_time = time.time()
+        
+        print(f"\n📦 Processing chunk {chunk_num}...")
+        
+        # Step 1: Optimize chunk memory immediately
+        chunk_optimized = optimize_numeric_dtypes(chunk)
+        chunk_optimized = optimize_categorical_dtypes(chunk_optimized)
+        
+        # Step 2: Apply business logic to chunk
+        chunk_processed = process_customer_chunk(chunk_optimized)
+        
+        # Step 3: Aggregate statistics (don't store full chunk!)
+        chunk_customers = len(chunk_processed)
+        chunk_income = chunk_processed['Income'].sum()
+        
+        total_customers += chunk_customers
+        total_income += chunk_income
+        
+        # Update education counts
+        education_chunk_counts = chunk_processed['Education'].value_counts()
+        for education, count in education_chunk_counts.items():
+            education_counts[education] = education_counts.get(education, 0) + count
+        
+        # Update segment counts
+        segment_chunk_counts = chunk_processed['customer_segment'].value_counts()
+        for segment, count in segment_chunk_counts.items():
+            segment_stats[segment] = segment_stats.get(segment, 0) + count
+        
+        # Store chunk summary (lightweight!)
+        chunk_summary = {
+            'chunk_num': chunk_num,
+            'customers': chunk_customers,
+            'avg_income': chunk_processed['Income'].mean(),
+            'processing_time': time.time() - start_time
+        }
+        chunk_summaries.append(chunk_summary)
+        
+        print(f"   ✅ Processed {chunk_customers} customers in {chunk_summary['processing_time']:.4f}s")
+        
+        # Cleanup chunk from memory (important!)
+        del chunk, chunk_optimized, chunk_processed
+        gc.collect()  # Force garbage collection
+    
+    # Calculate final aggregated results
+    avg_income = total_income / total_customers if total_customers > 0 else 0
+    
+    print(f"\n" + "="*50)
+    print("=== CHUNKED PROCESSING RESULTS ===")
+    print("="*50)
+    print(f"📊 Total customers processed: {total_customers:,}")
+    print(f"💰 Average income: ${avg_income:,.2f}")
+    print(f"📚 Education distribution:")
+    for education, count in sorted(education_counts.items()):
+        percentage = (count / total_customers) * 100
+        print(f"   {education}: {count} ({percentage:.1f}%)")
+    
+    print(f"\n🎯 Customer segments:")
+    for segment, count in segment_stats.items():
+        percentage = (count / total_customers) * 100
+        print(f"   {segment}: {count} ({percentage:.1f}%)")
+    
+    # Performance summary
+    chunk_df = pd.DataFrame(chunk_summaries)
+    total_processing_time = chunk_df['processing_time'].sum()
+    avg_chunk_time = chunk_df['processing_time'].mean()
+    
+    print(f"\n⚡ Performance:")
+    print(f"   Total processing time: {total_processing_time:.4f} seconds")
+    print(f"   Average time per chunk: {avg_chunk_time:.4f} seconds")
+    print(f"   Chunks processed: {len(chunk_summaries)}")
+    
+    return {
+        'total_customers': total_customers,
+        'avg_income': avg_income,
+        'education_counts': education_counts,
+        'segment_stats': segment_stats,
+        'processing_stats': chunk_df
+    }
+
+def process_customer_chunk(chunk):
+    """
+    Apply business logic to a single chunk
+    """
+    # Add total spending
+    spending_cols = ['MntWines', 'MntFruits', 'MntMeatProducts', 
+                    'MntFishProducts', 'MntSweetProducts', 'MntGoldProds']
+    chunk['total_spending'] = chunk[spending_cols].sum(axis=1)
+    
+    # Add customer age
+    chunk['age'] = 2024 - chunk['Year_Birth']
+    
+    # Add customer segmentation
+    chunk['customer_segment'] = np.where(
+        chunk['Income'] > 75000,
+        np.where(chunk['total_spending'] > 1000, 'Premium', 'High-Income'),
+        np.where(chunk['Income'] > 40000, 'Middle-Income', 'Budget')
+    )
+    
+    return chunk
+
+# Demonstrate chunked processing
+print("🚀 Testing chunked processing approach...")
+chunked_results = demonstrate_chunked_processing(chunk_size=300)
+
+print(f"\n🎯 Chunked processing complete!")
+print(f"This approach can handle datasets of ANY size - even 100GB+ files!")
