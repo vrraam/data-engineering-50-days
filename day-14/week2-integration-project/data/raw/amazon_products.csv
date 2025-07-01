@@ -1,0 +1,201 @@
+product_id,product_name,category,brand,price,list_price
+PROD0001,BrandE Basketball 280,Sports,BrandE,275.57,275.57
+PROD0002,BrandB Tennis Racket 219,Sports,BrandB,151.89,151.89
+PROD0003,BrandA Manual 805,Books,BrandA,59.09,59.09
+PROD0004,BrandD Lamp 466,Home & Garden,BrandD,299.59,299.59
+PROD0005,BrandC Camera 262,Electronics,BrandC,422.35,422.35
+PROD0006,BrandE Smartphone 376,Electronics,BrandE,44.33,44.33
+PROD0007,BrandA Lamp 135,Home & Garden,BrandA,472.13,472.13
+PROD0008,BrandD Vase 295,Home & Garden,BrandD,56.95,56.95
+PROD0009,BrandB Jeans 895,Clothing,BrandB,136.59,136.59
+PROD0010,BrandA Tablet 826,Electronics,BrandA,340.12,340.12
+PROD0011,BrandC Tablet 745,Electronics,BrandC,191.06,191.06
+PROD0012,BrandE Tennis Racket 338,Sports,BrandE,402.96,402.96
+PROD0013,BrandD Running Shoes 731,Sports,BrandD,496.82,496.82
+PROD0014,BrandC Laptop 114,Electronics,BrandC,87.06,87.06
+PROD0015,BrandE Manual 388,Books,BrandE,326.93,326.93
+PROD0016,BrandE Chair 469,Home & Garden,BrandE,107.53,107.53
+PROD0017,BrandA Plant 833,Home & Garden,BrandA,420.65,420.65
+PROD0018,BrandD Camera 585,Electronics,BrandD,382.75,382.75
+PROD0019,BrandB Smartphone 734,Electronics,BrandB,97.93,97.93
+PROD0020,BrandA Chair 545,Home & Garden,BrandA,143.3,143.3
+PROD0021,BrandB Table 978,Home & Garden,BrandB,347.24,347.24
+PROD0022,BrandC Headphones 166,Electronics,BrandC,246.74,246.74
+PROD0023,BrandE Biography 166,Books,BrandE,171.65,171.65
+PROD0024,BrandD Vase 409,Home & Garden,BrandD,156.94,156.94
+PROD0025,BrandD Cookbook 234,Books,BrandD,45.66,45.66
+PROD0026,BrandB Dress 505,Clothing,BrandB,46.44,46.44
+PROD0027,BrandD Plant 889,Home & Garden,BrandD,51.27,51.27
+PROD0028,BrandC Shoes 945,Clothing,BrandC,375.4,375.4
+PROD0029,BrandB Table 673,Home & Garden,BrandB,26.99,26.99
+PROD0030,BrandA Yoga Mat 808,Sports,BrandA,257.15,257.15
+PROD0031,BrandD Jeans 711,Clothing,BrandD,132.54,132.54
+PROD0032,BrandE Lamp 608,Home & Garden,BrandE,65.3,65.3
+PROD0033,BrandA Dress 750,Clothing,BrandA,48.7,48.7
+PROD0034,BrandD Dumbbell 559,Sports,BrandD,291.84,291.84
+PROD0035,BrandB Jeans 853,Clothing,BrandB,86.62,86.62
+PROD0036,BrandC Camera 813,Electronics,BrandC,162.51,162.51
+PROD0037,BrandE Jeans 656,Clothing,BrandE,73.39,73.39
+PROD0038,BrandA Tablet 646,Electronics,BrandA,69.11,69.11
+PROD0039,BrandA Cookbook 512,Books,BrandA,322.75,322.75
+PROD0040,BrandC Jeans 795,Clothing,BrandC,460.89,460.89
+PROD0041,BrandA Manual 426,Books,BrandA,167.7,167.7
+PROD0042,BrandC Textbook 219,Books,BrandC,17.99,17.99
+PROD0043,BrandA Jeans 675,Clothing,BrandA,91.25,91.25
+PROD0044,BrandB Headphones 486,Electronics,BrandB,449.12,449.12
+PROD0045,BrandB Table 406,Home & Garden,BrandB,296.81,296.81
+PROD0046,BrandD Table 775,Home & Garden,BrandD,386.47,386.47
+PROD0047,BrandD Dress 599,Clothing,BrandD,97.57,97.57
+PROD0048,BrandC Dumbbell 999,Sports,BrandC,396.61,396.61
+PROD0049,BrandD Yoga Mat 568,Sports,BrandD,497.21,497.21
+PROD0050,BrandC Headphones 956,Electronics,BrandC,296.06,296.06
+PROD0051,BrandD Jeans 453,Clothing,BrandD,447.56,447.56
+PROD0052,BrandC Tablet 413,Electronics,BrandC,120.26,120.26
+PROD0053,BrandC Tablet 199,Electronics,BrandC,274.07,274.07
+PROD0054,BrandB Headphones 119,Electronics,BrandB,403.23,403.23
+PROD0055,BrandB Jacket 774,Clothing,BrandB,335.65,335.65
+PROD0056,BrandD Chair 686,Home & Garden,BrandD,253.57,253.57
+PROD0057,BrandA Textbook 876,Books,BrandA,153.23,153.23
+PROD0058,BrandC Novel 456,Books,BrandC,418.79,418.79
+PROD0059,BrandA Dress 149,Clothing,BrandA,400.8,400.8
+PROD0060,BrandC Laptop 551,Electronics,BrandC,197.69,197.69
+PROD0061,BrandA Plant 127,Home & Garden,BrandA,446.17,446.17
+PROD0062,BrandA Chair 155,Home & Garden,BrandA,481.77,481.77
+PROD0063,BrandE Camera 447,Electronics,BrandE,386.26,386.26
+PROD0064,BrandA Running Shoes 559,Sports,BrandA,472.57,472.57
+PROD0065,BrandE T-Shirt 110,Clothing,BrandE,248.76,248.76
+PROD0066,BrandA Dumbbell 753,Sports,BrandA,415.84,415.84
+PROD0067,BrandA Camera 894,Electronics,BrandA,445.75,445.75
+PROD0068,BrandE Dress 671,Clothing,BrandE,293.19,293.19
+PROD0069,BrandD Camera 633,Electronics,BrandD,246.66,246.66
+PROD0070,BrandA T-Shirt 762,Clothing,BrandA,271.12,271.12
+PROD0071,BrandB Cookbook 381,Books,BrandB,111.79,111.79
+PROD0072,BrandB Plant 451,Home & Garden,BrandB,405.37,405.37
+PROD0073,BrandE Camera 127,Electronics,BrandE,260.51,260.51
+PROD0074,BrandB Vase 509,Home & Garden,BrandB,216.58,216.58
+PROD0075,BrandA Jeans 297,Clothing,BrandA,203.69,203.69
+PROD0076,BrandC Biography 968,Books,BrandC,219.12,219.12
+PROD0077,BrandA Vase 749,Home & Garden,BrandA,201.43,201.43
+PROD0078,BrandE Cookbook 262,Books,BrandE,137.56,137.56
+PROD0079,BrandD Camera 773,Electronics,BrandD,383.65,383.65
+PROD0080,BrandC Headphones 681,Electronics,BrandC,160.16,160.16
+PROD0081,BrandE Biography 112,Books,BrandE,454.31,454.31
+PROD0082,BrandA Biography 416,Books,BrandA,493.86,493.86
+PROD0083,BrandE Jeans 433,Clothing,BrandE,477.64,477.64
+PROD0084,BrandC Shoes 188,Clothing,BrandC,13.69,13.69
+PROD0085,BrandD Dumbbell 346,Sports,BrandD,283.84,283.84
+PROD0086,BrandB Textbook 596,Books,BrandB,356.09,356.09
+PROD0087,BrandE Vase 408,Home & Garden,BrandE,169.09,169.09
+PROD0088,BrandE Manual 142,Books,BrandE,206.02,206.02
+PROD0089,BrandC Chair 896,Home & Garden,BrandC,48.22,48.22
+PROD0090,BrandE Smartphone 871,Electronics,BrandE,180.75,180.75
+PROD0091,BrandE Yoga Mat 458,Sports,BrandE,321.08,321.08
+PROD0092,BrandA Jacket 602,Clothing,BrandA,448.87,448.87
+PROD0093,BrandA Dumbbell 169,Sports,BrandA,394.48,394.48
+PROD0094,BrandC Headphones 111,Electronics,BrandC,201.2,201.2
+PROD0095,BrandA Dress 742,Clothing,BrandA,325.32,325.32
+PROD0096,BrandB Chair 935,Home & Garden,BrandB,160.67,160.67
+PROD0097,BrandC Dress 391,Clothing,BrandC,222.01,222.01
+PROD0098,BrandE Running Shoes 115,Sports,BrandE,52.09,52.09
+PROD0099,BrandB Yoga Mat 488,Sports,BrandB,66.71,66.71
+PROD0100,BrandE Tennis Racket 424,Sports,BrandE,343.41,343.41
+PROD0101,BrandD Chair 256,Home & Garden,BrandD,418.12,418.12
+PROD0102,BrandE Plant 498,Home & Garden,BrandE,245.9,245.9
+PROD0103,BrandE Camera 979,Electronics,BrandE,399.88,399.88
+PROD0104,BrandC Dumbbell 540,Sports,BrandC,18.31,18.31
+PROD0105,BrandC Laptop 735,Electronics,BrandC,439.56,439.56
+PROD0106,BrandA Running Shoes 223,Sports,BrandA,339.76,339.76
+PROD0107,BrandA Novel 148,Books,BrandA,81.82,81.82
+PROD0108,BrandA Laptop 360,Electronics,BrandA,99.02,99.02
+PROD0109,BrandD Smartphone 830,Electronics,BrandD,178.12,178.12
+PROD0110,BrandE Shoes 343,Clothing,BrandE,315.39,315.39
+PROD0111,BrandA Basketball 566,Sports,BrandA,27.45,27.45
+PROD0112,BrandD Table 470,Home & Garden,BrandD,413.75,413.75
+PROD0113,BrandB Chair 606,Home & Garden,BrandB,428.12,428.12
+PROD0114,BrandA Headphones 804,Electronics,BrandA,206.98,206.98
+PROD0115,BrandD Vase 854,Home & Garden,BrandD,182.96,182.96
+PROD0116,BrandC Biography 255,Books,BrandC,22.35,22.35
+PROD0117,BrandE Table 445,Home & Garden,BrandE,92.88,92.88
+PROD0118,BrandA Plant 787,Home & Garden,BrandA,112.73,112.73
+PROD0119,BrandD Tablet 913,Electronics,BrandD,153.21,153.21
+PROD0120,BrandA Basketball 930,Sports,BrandA,201.64,201.64
+PROD0121,BrandB Basketball 673,Sports,BrandB,457.53,457.53
+PROD0122,BrandB Smartphone 720,Electronics,BrandB,111.56,111.56
+PROD0123,BrandC Tablet 768,Electronics,BrandC,32.77,32.77
+PROD0124,BrandE Headphones 945,Electronics,BrandE,350.56,350.56
+PROD0125,BrandB Lamp 802,Home & Garden,BrandB,80.47,80.47
+PROD0126,BrandE Tennis Racket 216,Sports,BrandE,471.44,471.44
+PROD0127,BrandC Chair 929,Home & Garden,BrandC,464.9,464.9
+PROD0128,BrandB Shoes 948,Clothing,BrandB,473.81,473.81
+PROD0129,BrandA Running Shoes 972,Sports,BrandA,202.07,202.07
+PROD0130,BrandE Jeans 159,Clothing,BrandE,27.94,27.94
+PROD0131,BrandD Lamp 909,Home & Garden,BrandD,352.15,352.15
+PROD0132,BrandB Jacket 735,Clothing,BrandB,392.31,392.31
+PROD0133,BrandC Tablet 324,Electronics,BrandC,373.0,373.0
+PROD0134,BrandA Tennis Racket 187,Sports,BrandA,311.85,311.85
+PROD0135,BrandA Jacket 696,Clothing,BrandA,257.19,257.19
+PROD0136,BrandA Vase 536,Home & Garden,BrandA,485.28,485.28
+PROD0137,BrandD Manual 732,Books,BrandD,213.75,213.75
+PROD0138,BrandC Dumbbell 935,Sports,BrandC,320.38,320.38
+PROD0139,BrandD Biography 158,Books,BrandD,27.04,27.04
+PROD0140,BrandD Yoga Mat 523,Sports,BrandD,320.31,320.31
+PROD0141,BrandD Yoga Mat 834,Sports,BrandD,126.43,126.43
+PROD0142,BrandD Jeans 915,Clothing,BrandD,454.61,454.61
+PROD0143,BrandB Shoes 562,Clothing,BrandB,80.13,80.13
+PROD0144,BrandD Camera 624,Electronics,BrandD,494.09,494.09
+PROD0145,BrandC Biography 926,Books,BrandC,286.27,286.27
+PROD0146,BrandC Smartphone 749,Electronics,BrandC,259.01,259.01
+PROD0147,BrandB Tablet 279,Electronics,BrandB,307.62,307.62
+PROD0148,BrandB Chair 123,Home & Garden,BrandB,245.44,245.44
+PROD0149,BrandB Headphones 488,Electronics,BrandB,399.43,399.43
+PROD0150,BrandE Cookbook 299,Books,BrandE,194.71,194.71
+PROD0151,BrandA Dress 529,Clothing,BrandA,186.95,186.95
+PROD0152,BrandA Vase 965,Home & Garden,BrandA,432.81,432.81
+PROD0153,BrandB Textbook 844,Books,BrandB,235.65,235.65
+PROD0154,BrandE Jacket 748,Clothing,BrandE,302.02,302.02
+PROD0155,BrandD Tablet 410,Electronics,BrandD,20.91,20.91
+PROD0156,BrandD Camera 741,Electronics,BrandD,322.71,322.71
+PROD0157,BrandC Jacket 271,Clothing,BrandC,238.84,238.84
+PROD0158,BrandD Jeans 561,Clothing,BrandD,172.54,172.54
+PROD0159,BrandA Tennis Racket 522,Sports,BrandA,153.13,153.13
+PROD0160,BrandE Yoga Mat 757,Sports,BrandE,19.66,19.66
+PROD0161,BrandC Camera 648,Electronics,BrandC,178.38,178.38
+PROD0162,BrandB Headphones 341,Electronics,BrandB,126.85,126.85
+PROD0163,BrandA Jacket 785,Clothing,BrandA,380.7,380.7
+PROD0164,BrandE Jeans 447,Clothing,BrandE,218.57,218.57
+PROD0165,BrandE Laptop 588,Electronics,BrandE,31.05,31.05
+PROD0166,BrandB Biography 673,Books,BrandB,308.32,308.32
+PROD0167,BrandB Plant 697,Home & Garden,BrandB,319.71,319.71
+PROD0168,BrandA T-Shirt 774,Clothing,BrandA,331.47,331.47
+PROD0169,BrandB Lamp 168,Home & Garden,BrandB,452.26,452.26
+PROD0170,BrandE Novel 219,Books,BrandE,136.83,136.83
+PROD0171,BrandC Running Shoes 243,Sports,BrandC,23.14,23.14
+PROD0172,BrandE Yoga Mat 630,Sports,BrandE,18.53,18.53
+PROD0173,BrandC Dress 688,Clothing,BrandC,168.07,168.07
+PROD0174,BrandE Headphones 886,Electronics,BrandE,131.54,131.54
+PROD0175,BrandD Vase 507,Home & Garden,BrandD,96.66,96.66
+PROD0176,BrandB Chair 605,Home & Garden,BrandB,119.73,119.73
+PROD0177,BrandD Smartphone 705,Electronics,BrandD,289.1,289.1
+PROD0178,BrandC Table 722,Home & Garden,BrandC,347.89,347.89
+PROD0179,BrandD Textbook 963,Books,BrandD,154.31,154.31
+PROD0180,BrandD Lamp 764,Home & Garden,BrandD,375.31,375.31
+PROD0181,BrandA Laptop 481,Electronics,BrandA,396.72,396.72
+PROD0182,BrandE Camera 245,Electronics,BrandE,255.95,255.95
+PROD0183,BrandB Tablet 211,Electronics,BrandB,468.34,468.34
+PROD0184,BrandE Camera 580,Electronics,BrandE,433.54,433.54
+PROD0185,BrandA Table 711,Home & Garden,BrandA,54.78,54.78
+PROD0186,BrandE Plant 898,Home & Garden,BrandE,28.9,28.9
+PROD0187,BrandB Laptop 252,Electronics,BrandB,237.44,237.44
+PROD0188,BrandB Dress 836,Clothing,BrandB,300.89,300.89
+PROD0189,BrandE Shoes 807,Clothing,BrandE,182.55,182.55
+PROD0190,BrandA Plant 381,Home & Garden,BrandA,62.53,62.53
+PROD0191,BrandC Basketball 814,Sports,BrandC,499.31,499.31
+PROD0192,BrandE Plant 379,Home & Garden,BrandE,433.14,433.14
+PROD0193,BrandA Camera 705,Electronics,BrandA,115.34,115.34
+PROD0194,BrandE Yoga Mat 398,Sports,BrandE,237.37,237.37
+PROD0195,BrandC Tablet 840,Electronics,BrandC,43.89,43.89
+PROD0196,BrandD T-Shirt 462,Clothing,BrandD,465.02,465.02
+PROD0197,BrandC Jacket 837,Clothing,BrandC,373.37,373.37
+PROD0198,BrandE Basketball 131,Sports,BrandE,342.22,342.22
+PROD0199,BrandB Lamp 155,Home & Garden,BrandB,309.78,309.78
+PROD0200,BrandA Lamp 444,Home & Garden,BrandA,260.49,260.49
