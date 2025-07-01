@@ -588,3 +588,131 @@ chunked_results = demonstrate_chunked_processing(chunk_size=300)
 
 print(f"\n🎯 Chunked processing complete!")
 print(f"This approach can handle datasets of ANY size - even 100GB+ files!")
+
+
+# === DEBUG AND FIX MISSING COLUMNS ===
+print("\n" + "="*50)
+print("=== DEBUGGING DATAFRAME COLUMNS ===")
+print("="*50)
+
+print("Current columns in df_advanced:")
+print(list(df_advanced.columns))
+print(f"\nDataFrame shape: {df_advanced.shape}")
+
+# Check if total_spending exists
+if 'total_spending' in df_advanced.columns:
+    print("✅ total_spending column exists!")
+else:
+    print("❌ total_spending column missing - adding it now...")
+    spending_cols = ['MntWines', 'MntFruits', 'MntMeatProducts', 
+                    'MntFishProducts', 'MntSweetProducts', 'MntGoldProds']
+    
+    print(f"Using spending columns: {spending_cols}")
+    
+    # Check if spending columns exist
+    missing_cols = [col for col in spending_cols if col not in df_advanced.columns]
+    if missing_cols:
+        print(f"❌ Missing spending columns: {missing_cols}")
+    else:
+        print("✅ All spending columns found!")
+        df_advanced['total_spending'] = df_advanced[spending_cols].sum(axis=1)
+        print(f"✅ total_spending column added!")
+        print(f"   Sample values: {df_advanced['total_spending'].head().values}")
+
+# Verify all required columns exist
+required_cols = ['Income', 'total_spending', 'age', 'Education', 'customer_segment']
+missing_required = [col for col in required_cols if col not in df_advanced.columns]
+
+if missing_required:
+    print(f"❌ Still missing required columns: {missing_required}")
+    
+    # Add missing columns one by one
+    if 'age' not in df_advanced.columns:
+        print("Adding age column...")
+        df_advanced['age'] = 2024 - df_advanced['Year_Birth']
+        
+    if 'customer_segment' not in df_advanced.columns:
+        print("Adding customer_segment column...")
+        df_advanced['customer_segment'] = np.where(
+            df_advanced['Income'] > 75000,
+            np.where(df_advanced['total_spending'] > 1000, 'Premium', 'High-Income'),
+            np.where(df_advanced['Income'] > 40000, 'Middle-Income', 'Budget')
+        )
+else:
+    print("✅ All required columns present!")
+
+print(f"\nFinal columns: {list(df_advanced.columns)}")
+print(f"Final shape: {df_advanced.shape}")
+
+# === NOW RUN THE FIXED QUERY OPERATIONS ===
+def advanced_query_expressions(df):
+    """
+    Demonstrate advanced query expressions and eval()
+    """
+    print(f"\n" + "="*50)
+    print("=== ADVANCED QUERY EXPRESSIONS ===")
+    print("="*50)
+    
+    # 1. Simple mathematical expressions with eval() (using only basic columns)
+    print("1️⃣ Mathematical expressions with .eval()")
+    start_time = time.time()
+    
+    # Use simple calculation with columns we know exist
+    df_eval = df.eval('customer_value_score = (Income / 1000) + (age / 10)')
+    
+    eval_time = time.time() - start_time
+    print(f"   ✅ eval() expression time: {eval_time:.4f} seconds")
+    print(f"   📊 Average value score: {df_eval['customer_value_score'].mean():.2f}")
+    
+    # 2. Dynamic queries with variables
+    print(f"\n2️⃣ Dynamic queries with variables")
+    income_threshold = 60000
+    age_min = 25
+    age_max = 55
+    
+    dynamic_query = f'Income > {income_threshold} and age >= {age_min} and age <= {age_max}'
+    dynamic_result = df.query(dynamic_query)
+    
+    print(f"   🎯 Query: {dynamic_query}")
+    print(f"   📊 Dynamic query result: {len(dynamic_result)} customers found")
+    
+    # 3. Simple boolean logic queries
+    print(f"\n3️⃣ Simple boolean logic queries")
+    
+    simple_query = 'Income > 75000 and Education == "Graduation"'
+    simple_result = df.query(simple_query)
+    print(f"   🎯 Simple query: High income + Graduation")
+    print(f"   📊 Simple query result: {len(simple_result)} customers found")
+    
+    # 4. Education-based filtering
+    print(f"\n4️⃣ Education-based filtering")
+    
+    education_query = 'Education in ["PhD", "Master"] and Income > 50000'
+    education_result = df.query(education_query)
+    print(f"   🎯 Education query: PhD or Master + Income > 50k")
+    print(f"   📊 Education query result: {len(education_result)} customers found")
+    
+    return df_eval, dynamic_result, simple_result, education_result
+
+# Apply advanced query techniques
+eval_data, dynamic_data, simple_data, education_data = advanced_query_expressions(df_advanced)
+
+print(f"\n🎯 Query optimization complete!")
+print(f"Advanced filtering techniques mastered! 🚀")
+
+# Summary of all query results  
+print(f"\n" + "="*40)
+print("=== QUERY RESULTS SUMMARY ===")
+print("="*40)
+print(f"🎯 Dynamic filter: {len(dynamic_data)} customers") 
+print(f"🔍 Simple filter: {len(simple_data)} customers")
+print(f"📚 Education filter: {len(education_data)} customers")
+print(f"📈 Value scores calculated: {len(eval_data)} customers")
+
+print(f"\n🎉 CONGRATULATIONS! Day 15 Complete!")
+print(f"✨ You've mastered pandas optimization:")
+print(f"   🚀 82.5% memory reduction")
+print(f"   ⚡ 248x vectorization speedup") 
+print(f"   🗂️ Chunked processing for unlimited data")
+print(f"   🔍 Advanced query techniques")
+print(f"   📊 Professional performance profiling")
