@@ -1,0 +1,276 @@
+2025-07-02 21:18:17,988 - BaseAPIClient - INFO - Making GET request to https://jsonplaceholder.typicode.com/posts
+2025-07-02 21:18:18,209 - BaseAPIClient - INFO - API Response: 200 - https://jsonplaceholder.typicode.com/posts?_limit=5
+2025-07-02 21:18:18,210 - BaseAPIClient - INFO - Rate limiting: sleeping for 0.78 seconds
+2025-07-02 21:18:18,993 - BaseAPIClient - INFO - Making POST request to https://jsonplaceholder.typicode.com/posts
+2025-07-02 21:18:19,114 - BaseAPIClient - INFO - API Response: 201 - https://jsonplaceholder.typicode.com/posts
+2025-07-02 21:22:32,553 - DiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/all
+2025-07-02 21:22:33,399 - DiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/all
+2025-07-02 21:22:33,400 - DiseaseShClient - INFO - ✅ Retrieved global COVID-19 statistics
+2025-07-02 21:22:33,400 - RestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/USA
+2025-07-02 21:22:33,606 - RestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/USA
+2025-07-02 21:22:33,606 - RestCountriesClient - INFO - ✅ Retrieved information for USA
+2025-07-02 21:22:33,607 - WorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:22:34,099 - WorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:22:34,100 - WorldBankClient - INFO - ✅ Retrieved GDP data for US
+2025-07-02 21:22:34,100 - COVIDDataIntegrator - INFO - 🔄 Gathering comprehensive data for USA
+2025-07-02 21:22:34,100 - DiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:22:34,585 - DiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:22:34,586 - DiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:22:34,586 - RestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/USA
+2025-07-02 21:22:34,735 - RestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/USA
+2025-07-02 21:22:34,736 - RestCountriesClient - INFO - ✅ Retrieved information for USA
+2025-07-02 21:22:34,736 - WorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:22:35,022 - WorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:22:35,022 - WorldBankClient - INFO - ✅ Retrieved GDP data for US
+2025-07-02 21:22:35,022 - COVIDDataIntegrator - INFO - ✅ Completed data integration for USA using 3 sources
+2025-07-02 21:26:41,074 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for USA
+2025-07-02 21:26:41,074 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for USA
+2025-07-02 21:26:41,074 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:26:41,537 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:26:41,541 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:26:41,541 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for USA
+2025-07-02 21:26:41,542 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/USA
+2025-07-02 21:26:41,703 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/USA
+2025-07-02 21:26:41,707 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for USA
+2025-07-02 21:26:41,707 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for USA
+2025-07-02 21:26:41,708 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:26:41,850 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:26:41,852 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for US
+2025-07-02 21:26:41,853 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:26:41,853 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for InvalidCountry
+2025-07-02 21:26:41,853 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for InvalidCountry
+2025-07-02 21:26:41,853 - MonitoredDiseaseShClient - INFO - Rate limiting: sleeping for 0.22 seconds
+2025-07-02 21:26:42,078 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/InvalidCountry
+2025-07-02 21:26:42,237 - MonitoredDiseaseShClient - INFO - API Response: 404 - https://disease.sh/v3/covid-19/countries/InvalidCountry
+2025-07-02 21:26:44,243 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/InvalidCountry
+2025-07-02 21:26:44,393 - MonitoredDiseaseShClient - INFO - API Response: 404 - https://disease.sh/v3/covid-19/countries/InvalidCountry
+2025-07-02 21:26:48,399 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/InvalidCountry
+2025-07-02 21:26:48,566 - MonitoredDiseaseShClient - INFO - API Response: 404 - https://disease.sh/v3/covid-19/countries/InvalidCountry
+2025-07-02 21:26:48,569 - MonitoredDiseaseShClient - ERROR - ❌ Failed to get countries data: Client error: 404
+2025-07-02 21:26:48,569 - ResilientCOVIDIntegrator - WARNING - ⚠️ Primary COVID data failed: Client error: 404
+2025-07-02 21:26:48,569 - ResilientCOVIDIntegrator - INFO - 🔄 Falling back to global COVID data
+2025-07-02 21:26:48,569 - MonitoredDiseaseShClient - INFO - Rate limiting: sleeping for 0.83 seconds
+2025-07-02 21:26:49,404 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/all
+2025-07-02 21:26:49,577 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/all
+2025-07-02 21:26:49,582 - MonitoredDiseaseShClient - INFO - ✅ Retrieved global COVID-19 statistics
+2025-07-02 21:26:49,582 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for InvalidCountry
+2025-07-02 21:26:49,582 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/InvalidCountry
+2025-07-02 21:26:49,632 - MonitoredRestCountriesClient - INFO - API Response: 404 - https://restcountries.com/v3.1/name/InvalidCountry
+2025-07-02 21:26:51,638 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/InvalidCountry
+2025-07-02 21:26:51,692 - MonitoredRestCountriesClient - INFO - API Response: 404 - https://restcountries.com/v3.1/name/InvalidCountry
+2025-07-02 21:26:55,698 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/InvalidCountry
+2025-07-02 21:26:55,746 - MonitoredRestCountriesClient - INFO - API Response: 404 - https://restcountries.com/v3.1/name/InvalidCountry
+2025-07-02 21:26:55,749 - MonitoredRestCountriesClient - ERROR - ❌ Failed to get country info for InvalidCountry: Client error: 404
+2025-07-02 21:26:55,749 - ResilientCOVIDIntegrator - WARNING - ⚠️ Demographics failed: Client error: 404
+2025-07-02 21:26:55,749 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for InvalidCountry
+2025-07-02 21:26:55,749 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:26:56,058 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:26:56,061 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for IN
+2025-07-02 21:26:56,061 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 2/0 sources successful
+2025-07-02 21:26:56,269 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for USA
+2025-07-02 21:26:56,269 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for USA
+2025-07-02 21:26:56,269 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:26:56,422 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:26:56,424 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:26:56,425 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for USA
+2025-07-02 21:26:56,425 - MonitoredRestCountriesClient - INFO - Rate limiting: sleeping for 0.27 seconds
+2025-07-02 21:26:56,703 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/USA
+2025-07-02 21:26:56,751 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/USA
+2025-07-02 21:26:56,754 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for USA
+2025-07-02 21:26:56,754 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for USA
+2025-07-02 21:26:56,755 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:26:56,866 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:26:56,869 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for US
+2025-07-02 21:26:56,869 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:26:57,074 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for India
+2025-07-02 21:26:57,075 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for India
+2025-07-02 21:26:57,075 - MonitoredDiseaseShClient - INFO - Rate limiting: sleeping for 0.19 seconds
+2025-07-02 21:26:57,275 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/India
+2025-07-02 21:26:57,429 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/India
+2025-07-02 21:26:57,433 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: disease_sh - 20.0% errors
+2025-07-02 21:26:57,434 - root - WARNING - ALERT: 📉 LOW DATA QUALITY: disease_sh - 78.8% quality score
+2025-07-02 21:26:57,434 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:26:57,434 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for India
+2025-07-02 21:26:57,434 - MonitoredRestCountriesClient - INFO - Rate limiting: sleeping for 0.27 seconds
+2025-07-02 21:26:57,708 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/India
+2025-07-02 21:26:57,757 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/India
+2025-07-02 21:26:57,760 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for India
+2025-07-02 21:26:57,760 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for India
+2025-07-02 21:26:57,760 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:26:58,137 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:26:58,141 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for IN
+2025-07-02 21:26:58,141 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:26:58,346 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for Brazil
+2025-07-02 21:26:58,346 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for Brazil
+2025-07-02 21:26:58,347 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/Brazil
+2025-07-02 21:26:58,506 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/Brazil
+2025-07-02 21:26:58,509 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: disease_sh - 16.7% errors
+2025-07-02 21:26:58,509 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:26:58,509 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for Brazil
+2025-07-02 21:26:58,509 - MonitoredRestCountriesClient - INFO - Rate limiting: sleeping for 0.20 seconds
+2025-07-02 21:26:58,713 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/Brazil
+2025-07-02 21:26:58,764 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/Brazil
+2025-07-02 21:26:58,768 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: rest_countries - 20.0% errors
+2025-07-02 21:26:58,768 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for Brazil
+2025-07-02 21:26:58,768 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for Brazil
+2025-07-02 21:26:58,768 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:26:59,098 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:26:59,102 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for BR
+2025-07-02 21:26:59,102 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:26:59,304 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for Germany
+2025-07-02 21:26:59,304 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for Germany
+2025-07-02 21:26:59,304 - MonitoredDiseaseShClient - INFO - Rate limiting: sleeping for 0.04 seconds
+2025-07-02 21:26:59,352 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/Germany
+2025-07-02 21:26:59,501 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/Germany
+2025-07-02 21:26:59,504 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: disease_sh - 14.3% errors
+2025-07-02 21:26:59,504 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:26:59,504 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for Germany
+2025-07-02 21:26:59,504 - MonitoredRestCountriesClient - INFO - Rate limiting: sleeping for 0.21 seconds
+2025-07-02 21:26:59,718 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/Germany
+2025-07-02 21:26:59,770 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/Germany
+2025-07-02 21:26:59,773 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: rest_countries - 16.7% errors
+2025-07-02 21:26:59,774 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for Germany
+2025-07-02 21:26:59,774 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for Germany
+2025-07-02 21:26:59,774 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:27:00,158 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:27:00,162 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for DE
+2025-07-02 21:27:00,162 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:27:00,365 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for France
+2025-07-02 21:27:00,365 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for France
+2025-07-02 21:27:00,366 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/France
+2025-07-02 21:27:00,517 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/France
+2025-07-02 21:27:00,521 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: disease_sh - 12.5% errors
+2025-07-02 21:27:00,521 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:27:00,521 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for France
+2025-07-02 21:27:00,522 - MonitoredRestCountriesClient - INFO - Rate limiting: sleeping for 0.20 seconds
+2025-07-02 21:27:00,720 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/France
+2025-07-02 21:27:00,771 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/France
+2025-07-02 21:27:00,774 - root - WARNING - ALERT: 🚨 HIGH ERROR RATE: rest_countries - 14.3% errors
+2025-07-02 21:27:00,774 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for France
+2025-07-02 21:27:00,774 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for France
+2025-07-02 21:27:00,775 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/FR/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:27:01,082 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/FR/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:27:01,086 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for FR
+2025-07-02 21:27:01,086 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:36,423 - DataPipelineScheduler - INFO - 🔄 Updating data for USA
+2025-07-02 21:31:36,424 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for USA
+2025-07-02 21:31:36,424 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for USA
+2025-07-02 21:31:36,424 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:31:36,964 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:31:36,967 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:31:36,967 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for USA
+2025-07-02 21:31:36,968 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/USA
+2025-07-02 21:31:37,116 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/USA
+2025-07-02 21:31:37,119 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for USA
+2025-07-02 21:31:37,119 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for USA
+2025-07-02 21:31:37,119 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:31:37,301 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:31:37,304 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for US
+2025-07-02 21:31:37,304 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:37,306 - DataPipelineScheduler - INFO - ✅ Updated USA: 111,820,082 cases, 3/3 sources
+2025-07-02 21:31:37,306 - DataPipelineScheduler - INFO - 📊 Updating API performance metrics
+2025-07-02 21:31:37,312 - DataPipelineScheduler - INFO - ✅ API performance metrics updated
+2025-07-02 21:31:37,312 - DataPipelineScheduler - INFO - 🔍 Running scheduled health checks
+2025-07-02 21:31:37,319 - DataPipelineScheduler - INFO - ✅ Health checks completed
+2025-07-02 21:31:37,319 - DataPipelineScheduler - INFO - 📄 Dashboard data exported to test_dashboard_data.json
+2025-07-02 21:31:37,320 - DataPipelineScheduler - INFO - ⏰ Setting up automated schedule
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO - ✅ Schedule configured:
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO -    • Priority countries: Every 15 minutes
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO -    • All countries: Every hour
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO -    • API metrics: Every 5 minutes
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO -    • Health checks: Every 10 minutes
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO -    • Dashboard export: Every 30 minutes
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO -    • Daily maintenance: 6:00 AM
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO - 🚀 Starting automated data pipeline scheduler
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO - ✅ Scheduler started successfully
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO - 📊 Running initial data collection...
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO - 🚀 Priority update for 5 countries
+2025-07-02 21:31:37,321 - DataPipelineScheduler - INFO - 🔄 Updating data for USA
+2025-07-02 21:31:37,321 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for USA
+2025-07-02 21:31:37,321 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for USA
+2025-07-02 21:31:37,322 - MonitoredDiseaseShClient - INFO - Rate limiting: sleeping for 0.10 seconds
+2025-07-02 21:31:37,429 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:31:37,583 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/USA
+2025-07-02 21:31:37,587 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:31:37,587 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for USA
+2025-07-02 21:31:37,588 - MonitoredRestCountriesClient - INFO - Rate limiting: sleeping for 0.38 seconds
+2025-07-02 21:31:37,973 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/USA
+2025-07-02 21:31:38,047 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/USA
+2025-07-02 21:31:38,048 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for USA
+2025-07-02 21:31:38,049 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for USA
+2025-07-02 21:31:38,049 - MonitoredWorldBankClient - INFO - Rate limiting: sleeping for 0.07 seconds
+2025-07-02 21:31:38,123 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:31:38,327 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:31:38,330 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for US
+2025-07-02 21:31:38,330 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:38,332 - DataPipelineScheduler - INFO - ✅ Updated USA: 111,820,082 cases, 3/3 sources
+2025-07-02 21:31:39,337 - DataPipelineScheduler - INFO - 🔄 Updating data for India
+2025-07-02 21:31:39,337 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for India
+2025-07-02 21:31:39,337 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for India
+2025-07-02 21:31:39,338 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/India
+2025-07-02 21:31:39,486 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/India
+2025-07-02 21:31:39,488 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:31:39,488 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for India
+2025-07-02 21:31:39,488 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/India
+2025-07-02 21:31:39,538 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/India
+2025-07-02 21:31:39,540 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for India
+2025-07-02 21:31:39,540 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for India
+2025-07-02 21:31:39,540 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:31:39,743 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:31:39,744 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for IN
+2025-07-02 21:31:39,745 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:39,746 - DataPipelineScheduler - INFO - ✅ Updated India: 45,035,393 cases, 3/3 sources
+2025-07-02 21:31:40,748 - DataPipelineScheduler - INFO - 🔄 Updating data for Brazil
+2025-07-02 21:31:40,748 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for Brazil
+2025-07-02 21:31:40,748 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for Brazil
+2025-07-02 21:31:40,749 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/Brazil
+2025-07-02 21:31:40,910 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/Brazil
+2025-07-02 21:31:40,914 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:31:40,914 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for Brazil
+2025-07-02 21:31:40,914 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/Brazil
+2025-07-02 21:31:40,964 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/Brazil
+2025-07-02 21:31:40,967 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for Brazil
+2025-07-02 21:31:40,967 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for Brazil
+2025-07-02 21:31:40,967 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:31:41,092 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:31:41,094 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for BR
+2025-07-02 21:31:41,094 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:41,096 - DataPipelineScheduler - INFO - ✅ Updated Brazil: 38,743,918 cases, 3/3 sources
+2025-07-02 21:31:42,098 - DataPipelineScheduler - INFO - 🔄 Updating data for Germany
+2025-07-02 21:31:42,099 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for Germany
+2025-07-02 21:31:42,099 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for Germany
+2025-07-02 21:31:42,099 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/Germany
+2025-07-02 21:31:42,257 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/Germany
+2025-07-02 21:31:42,261 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:31:42,261 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for Germany
+2025-07-02 21:31:42,261 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/Germany
+2025-07-02 21:31:42,309 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/Germany
+2025-07-02 21:31:42,312 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for Germany
+2025-07-02 21:31:42,312 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for Germany
+2025-07-02 21:31:42,312 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:31:42,400 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:31:42,403 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for DE
+2025-07-02 21:31:42,403 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:42,404 - DataPipelineScheduler - INFO - ✅ Updated Germany: 38,828,995 cases, 3/3 sources
+2025-07-02 21:31:43,409 - DataPipelineScheduler - INFO - 🔄 Updating data for France
+2025-07-02 21:31:43,410 - ResilientCOVIDIntegrator - INFO - 🔄 Starting resilient data integration for France
+2025-07-02 21:31:43,410 - ResilientCOVIDIntegrator - INFO - 🦠 Getting COVID data for France
+2025-07-02 21:31:43,411 - MonitoredDiseaseShClient - INFO - Making GET request to https://disease.sh/v3/covid-19/countries/France
+2025-07-02 21:31:43,570 - MonitoredDiseaseShClient - INFO - API Response: 200 - https://disease.sh/v3/covid-19/countries/France
+2025-07-02 21:31:43,574 - MonitoredDiseaseShClient - INFO - ✅ Retrieved data for 1 countries
+2025-07-02 21:31:43,574 - ResilientCOVIDIntegrator - INFO - 🌍 Getting demographics for France
+2025-07-02 21:31:43,574 - MonitoredRestCountriesClient - INFO - Making GET request to https://restcountries.com/v3.1/name/France
+2025-07-02 21:31:43,622 - MonitoredRestCountriesClient - INFO - API Response: 200 - https://restcountries.com/v3.1/name/France
+2025-07-02 21:31:43,625 - MonitoredRestCountriesClient - INFO - ✅ Retrieved information for France
+2025-07-02 21:31:43,625 - ResilientCOVIDIntegrator - INFO - 💰 Getting economic data for France
+2025-07-02 21:31:43,625 - MonitoredWorldBankClient - INFO - Making GET request to https://api.worldbank.org/v2/country/FR/indicator/NY.GDP.MKTP.CD
+2025-07-02 21:31:43,721 - MonitoredWorldBankClient - INFO - API Response: 200 - https://api.worldbank.org/v2/country/FR/indicator/NY.GDP.MKTP.CD?date=2022%3A2025&format=json&per_page=50
+2025-07-02 21:31:43,726 - MonitoredWorldBankClient - INFO - ✅ Retrieved GDP data for FR
+2025-07-02 21:31:43,726 - ResilientCOVIDIntegrator - INFO - ✅ Integration complete: 3/0 sources successful
+2025-07-02 21:31:43,729 - DataPipelineScheduler - INFO - ✅ Updated France: 40,138,560 cases, 3/3 sources
+2025-07-02 21:31:44,729 - DataPipelineScheduler - INFO - 📊 Updating API performance metrics
+2025-07-02 21:31:44,742 - DataPipelineScheduler - INFO - ✅ API performance metrics updated
+2025-07-02 21:31:44,742 - DataPipelineScheduler - INFO - 🔍 Running scheduled health checks
+2025-07-02 21:31:44,751 - DataPipelineScheduler - INFO - ✅ Health checks completed
+2025-07-02 21:31:44,753 - DataPipelineScheduler - INFO - 📄 Dashboard data exported to dashboard_data.json
+2025-07-02 21:32:12,339 - DataPipelineScheduler - INFO - 🛑 Scheduler stopped

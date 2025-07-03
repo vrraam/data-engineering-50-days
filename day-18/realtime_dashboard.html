@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data Integration Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .metric-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .metric-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .metric-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .metric-change {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .metric-change.positive {
+            background: #e8f5e8;
+            color: #27ae60;
+        }
+
+        .metric-change.negative {
+            background: #ffeaea;
+            color: #e74c3c;
+        }
+
+        .api-status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .api-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .api-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .api-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .status-healthy { background: #27ae60; }
+        .status-degraded { background: #f39c12; }
+        .status-unhealthy { background: #e74c3c; }
+        .status-unknown { background: #95a5a6; }
+
+        .api-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .api-metric {
+            text-align: center;
+        }
+
+        .api-metric-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .api-metric-value {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .chart-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .chart {
+            height: 300px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .alerts-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .alert {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+
+        .alert-warning {
+            background: #fef9e7;
+            border-color: #f39c12;
+            color: #8b6914;
+        }
+
+        .alert-error {
+            background: #ffeaea;
+            border-color: #e74c3c;
+            color: #c0392b;
+        }
+
+        .alert-success {
+            background: #e8f5e8;
+            border-color: #27ae60;
+            color: #1e8449;
+        }
+
+        .alert-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .timestamp {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        .loading {
+            display: inline-block;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .country-selector {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .country-selector select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .refresh-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s ease;
+            margin-left: 15px;
+        }
+
+        .refresh-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🌐 COVID-19 Data Integration Dashboard</h1>
+            <p>Real-time API monitoring and data integration status</p>
+        </div>
+
+        <div class="country-selector">
+            <div style="display: flex; align-items: center;">
+                <select id="countrySelect">
+                    <option value="USA">United States</option>
+                    <option value="India">India</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Spain">Spain</option>
+                </select>
+                <button class="refresh-btn" onclick="refreshData()">
+                    <span id="refreshIcon">🔄</span> Refresh Data
+                </button>
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-icon">🦠</div>
+                    <div class="metric-title">Total Cases</div>
+                </div>
+                <div class="metric-value" id="totalCases">Loading...</div>
+                <div class="metric-change positive" id="casesChange">+0.0%</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-icon">💀</div>
+                    <div class="metric-title">Total Deaths</div>
+                </div>
+                <div class="metric-value" id="totalDeaths">Loading...</div>
+                <div class="metric-change negative" id="deathsChange">+0.0%</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-icon">💚</div>
+                    <div class="metric-title">Recovered</div>
+                </div>
+                <div class="metric-value" id="totalRecovered">Loading...</div>
+                <div class="metric-change positive" id="recoveredChange">+0.0%</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-icon">🌍</div>
+                    <div class="metric-title">Population</div>
+                </div>
+                <div class="metric-value" id="population">Loading...</div>
+                <div class="metric-change" id="populationInfo">Demographics</div>
+            </div>
+        </div>
+
+        <div class="api-status-grid">
+            <div class="api-card">
+                <div class="api-header">
+                    <div class="api-name">
+                        <span class="status-indicator status-healthy" id="diseaseStatus"></span>
+                        Disease.sh API
+                    </div>
+                    <div id="diseaseGrade">A</div>
+                </div>
+                <div class="api-metrics">
+                    <div class="api-metric">
+                        <div class="api-metric-label">Success Rate</div>
+                        <div class="api-metric-value" id="diseaseSuccess">100%</div>
+                    </div>
+                    <div class="api-metric">
+                        <div class="api-metric-label">Avg Response</div>
+                        <div class="api-metric-value" id="diseaseResponse">0.8s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-card">
+                <div class="api-header">
+                    <div class="api-name">
+                        <span class="status-indicator status-healthy" id="countriesStatus"></span>
+                        REST Countries API
+                    </div>
+                    <div id="countriesGrade">A</div>
+                </div>
+                <div class="api-metrics">
+                    <div class="api-metric">
+                        <div class="api-metric-label">Success Rate</div>
+                        <div class="api-metric-value" id="countriesSuccess">100%</div>
+                    </div>
+                    <div class="api-metric">
+                        <div class="api-metric-label">Avg Response</div>
+                        <div class="api-metric-value" id="countriesResponse">1.2s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-card">
+                <div class="api-header">
+                    <div class="api-name">
+                        <span class="status-indicator status-degraded" id="worldbankStatus"></span>
+                        World Bank API
+                    </div>
+                    <div id="worldbankGrade">B</div>
+                </div>
+                <div class="api-metrics">
+                    <div class="api-metric">
+                        <div class="api-metric-label">Success Rate</div>
+                        <div class="api-metric-value" id="worldbankSuccess">95%</div>
+                    </div>
+                    <div class="api-metric">
+                        <div class="api-metric-label">Avg Response</div>
+                        <div class="api-metric-value" id="worldbankResponse">3.2s</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">📊 API Performance Timeline</div>
+            <div class="chart">
+                Real-time performance chart would be rendered here
+                <br>
+                <small>(In production: Chart.js or D3.js visualization)</small>
+            </div>
+        </div>
+
+        <div class="alerts-panel">
+            <h3 style="margin-bottom: 15px; color: #2c3e50;">🚨 System Alerts</h3>
+            <div id="alertsContainer">
+                <div class="alert alert-success">
+                    <div class="alert-icon">✅</div>
+                    <div>All APIs operating normally</div>
+                </div>
+                <div class="alert alert-warning">
+                    <div class="alert-icon">⚠️</div>
+                    <div>World Bank API showing slower response times</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timestamp">
+            Last updated: <span id="lastUpdate">Loading...</span>
+        </div>
+    </div>
+
+    <script>
+        // Sample data - in production, this would come from your API
+        const sampleData = {
+            USA: {
+                cases: 103436829,
+                deaths: 1127152,
+                recovered: 100691912,
+                population: 331002651
+            },
+            India: {
+                cases: 44690738,
+                deaths: 530779,
+                recovered: 44153960,
+                population: 1380004385
+            },
+            Brazil: {
+                cases: 37076053,
+                deaths: 687932,
+                recovered: 36384815,
+                population: 212559417
+            }
+        };
+
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toLocaleString();
+        }
+
+        function updateCountryData(country) {
+            const data = sampleData[country] || sampleData.USA;
+            
+            document.getElementById('totalCases').textContent = formatNumber(data.cases);
+            document.getElementById('totalDeaths').textContent = formatNumber(data.deaths);
+            document.getElementById('totalRecovered').textContent = formatNumber(data.recovered);
+            document.getElementById('population').textContent = formatNumber(data.population);
+
+            // Calculate mortality rate
+            const mortalityRate = ((data.deaths / data.cases) * 100).toFixed(2);
+            document.getElementById('casesChange').textContent = `${mortalityRate}% mortality`;
+            
+            // Calculate recovery rate
+            const recoveryRate = ((data.recovered / data.cases) * 100).toFixed(1);
+            document.getElementById('recoveredChange').textContent = `${recoveryRate}% recovery`;
+        }
+
+        function simulateAPIMetrics() {
+            // Simulate changing API metrics
+            const apis = ['disease', 'countries', 'worldbank'];
+            
+            apis.forEach(api => {
+                const successRate = 95 + Math.random() * 5;
+                const responseTime = 0.5 + Math.random() * 2;
+                
+                document.getElementById(api + 'Success').textContent = 
+                    successRate.toFixed(1) + '%';
+                document.getElementById(api + 'Response').textContent = 
+                    responseTime.toFixed(1) + 's';
+                
+                // Update status indicators based on performance
+                const statusElement = document.getElementById(api + 'Status');
+                if (successRate > 98 && responseTime < 2) {
+                    statusElement.className = 'status-indicator status-healthy';
+                } else if (successRate > 90) {
+                    statusElement.className = 'status-indicator status-degraded';
+                } else {
+                    statusElement.className = 'status-indicator status-unhealthy';
+                }
+            });
+        }
+
+        function refreshData() {
+            const refreshIcon = document.getElementById('refreshIcon');
+            refreshIcon.className = 'loading';
+            refreshIcon.textContent = '⟳';
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                const country = document.getElementById('countrySelect').value;
+                updateCountryData(country);
+                simulateAPIMetrics();
+                updateTimestamp();
+                
+                refreshIcon.className = '';
+                refreshIcon.textContent = '🔄';
+            }, 1000);
+        }
+
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = 
+                now.toLocaleString();
+        }
+
+        function addRandomAlert() {
+            const alerts = [
+                { type: 'warning', icon: '⚠️', message: 'API response time increased by 15%' },
+                { type: 'success', icon: '✅', message: 'Data quality check passed' },
+                { type: 'error', icon: '❌', message: 'Circuit breaker activated for slow API' },
+                { type: 'success', icon: '🔄', message: 'Fallback mechanism successful' }
+            ];
+            
+            const randomAlert = alerts[Math.floor(Math.random() * alerts.length)];
+            const alertsContainer = document.getElementById('alertsContainer');
+            
+            const alertElement = document.createElement('div');
+            alertElement.className = `alert alert-${randomAlert.type}`;
+            alertElement.innerHTML = `
+                <div class="alert-icon">${randomAlert.icon}</div>
+                <div>${randomAlert.message}</div>
+            `;
+            
+            alertsContainer.insertBefore(alertElement, alertsContainer.firstChild);
+            
+            // Remove old alerts (keep only last 5)
+            while (alertsContainer.children.length > 5) {
+                alertsContainer.removeChild(alertsContainer.lastChild);
+            }
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountryData('USA');
+            simulateAPIMetrics();
+            updateTimestamp();
+            
+            // Set up country selector
+            document.getElementById('countrySelect').addEventListener('change', function() {
+                updateCountryData(this.value);
+            });
+            
+            // Auto-refresh every 30 seconds
+            setInterval(() => {
+                simulateAPIMetrics();
+                updateTimestamp();
+            }, 30000);
+            
+            // Add random alerts every 45 seconds
+            setInterval(addRandomAlert, 45000);
+        });
+    </script>
+</body>
+</html>

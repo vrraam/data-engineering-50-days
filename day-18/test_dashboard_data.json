@@ -1,0 +1,40 @@
+{
+  "countries": {
+    "USA": {
+      "country": "USA",
+      "last_updated": "2025-07-02T21:31:37.304488",
+      "covid_cases": 111820082,
+      "covid_deaths": 1219487,
+      "covid_recovered": 109814428,
+      "population": 329484123,
+      "data_sources": [
+        "disease.sh",
+        "restcountries.com",
+        "worldbank.org"
+      ],
+      "data_quality_score": 1.0
+    }
+  },
+  "api_performance": {
+    "disease_sh": {
+      "success_rate": 1.0,
+      "avg_response_time": 0.5406618118286133,
+      "status": "healthy",
+      "grade": "A"
+    },
+    "world_bank": {
+      "success_rate": 1.0,
+      "avg_response_time": 0.18215608596801758,
+      "status": "healthy",
+      "grade": "A"
+    },
+    "rest_countries": {
+      "success_rate": 1.0,
+      "avg_response_time": 0.14937114715576172,
+      "status": "healthy",
+      "grade": "A"
+    }
+  },
+  "alerts": [],
+  "last_updated": "2025-07-02T21:31:37.319501"
+}

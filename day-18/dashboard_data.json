@@ -1,0 +1,96 @@
+{
+  "countries": {
+    "France": {
+      "country": "France",
+      "last_updated": "2025-07-02T21:31:43.726985",
+      "covid_cases": 40138560,
+      "covid_deaths": 167642,
+      "covid_recovered": 39970918,
+      "population": 67391582,
+      "data_sources": [
+        "disease.sh",
+        "restcountries.com",
+        "worldbank.org"
+      ],
+      "data_quality_score": 1.0
+    },
+    "Germany": {
+      "country": "Germany",
+      "last_updated": "2025-07-02T21:31:42.403423",
+      "covid_cases": 38828995,
+      "covid_deaths": 183027,
+      "covid_recovered": 38240600,
+      "population": 83240525,
+      "data_sources": [
+        "disease.sh",
+        "restcountries.com",
+        "worldbank.org"
+      ],
+      "data_quality_score": 1.0
+    },
+    "Brazil": {
+      "country": "Brazil",
+      "last_updated": "2025-07-02T21:31:41.095081",
+      "covid_cases": 38743918,
+      "covid_deaths": 711380,
+      "covid_recovered": 36249161,
+      "population": 212559409,
+      "data_sources": [
+        "disease.sh",
+        "restcountries.com",
+        "worldbank.org"
+      ],
+      "data_quality_score": 1.0
+    },
+    "India": {
+      "country": "India",
+      "last_updated": "2025-07-02T21:31:39.745336",
+      "covid_cases": 45035393,
+      "covid_deaths": 533570,
+      "covid_recovered": 0,
+      "population": 1380004385,
+      "data_sources": [
+        "disease.sh",
+        "restcountries.com",
+        "worldbank.org"
+      ],
+      "data_quality_score": 1.0
+    },
+    "USA": {
+      "country": "USA",
+      "last_updated": "2025-07-02T21:31:38.330852",
+      "covid_cases": 111820082,
+      "covid_deaths": 1219487,
+      "covid_recovered": 109814428,
+      "population": 329484123,
+      "data_sources": [
+        "disease.sh",
+        "restcountries.com",
+        "worldbank.org"
+      ],
+      "data_quality_score": 1.0
+    }
+  },
+  "api_performance": {
+    "disease_sh": {
+      "success_rate": 1.0,
+      "avg_response_time": 0.23867384592692056,
+      "status": "healthy",
+      "grade": "A"
+    },
+    "world_bank": {
+      "success_rate": 1.0,
+      "avg_response_time": 0.1624307632446289,
+      "status": "healthy",
+      "grade": "A"
+    },
+    "rest_countries": {
+      "success_rate": 1.0,
+      "avg_response_time": 0.13438522815704346,
+      "status": "healthy",
+      "grade": "A"
+    }
+  },
+  "alerts": [],
+  "last_updated": "2025-07-02T21:31:44.752539"
+}
