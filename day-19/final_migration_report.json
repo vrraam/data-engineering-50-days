@@ -1,0 +1,35 @@
+{
+  "migration_timestamp": "2025-07-03T16:39:47.155753",
+  "total_files": 3,
+  "original_size_mb": 1.0571136474609375,
+  "new_size_mb": 0.3877391815185547,
+  "compression_ratio": 2.7263523983333906,
+  "storage_savings_percent": 63.32095584520562,
+  "migration_time_seconds": 0.12015581130981445,
+  "validation_results": [
+    {
+      "file": "sample_customers.csv",
+      "row_count_match": true,
+      "column_count_match": true,
+      "source_size_mb": 0.02264404296875,
+      "target_size_mb": 0.018779754638671875,
+      "compression_ratio": 1.2057688401381272
+    },
+    {
+      "file": "sample_orders.csv",
+      "row_count_match": true,
+      "column_count_match": true,
+      "source_size_mb": 0.006867408752441406,
+      "target_size_mb": 0.008208274841308594,
+      "compression_ratio": 0.8366445916114791
+    },
+    {
+      "file": "ecommerce_sample.csv",
+      "row_count_match": true,
+      "column_count_match": true,
+      "source_size_mb": 1.027602195739746,
+      "target_size_mb": 0.3607511520385742,
+      "compression_ratio": 2.84850703853017
+    }
+  ]
+}

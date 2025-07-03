@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-07-03T16:39:47.035296",
+  "total_files": 3,
+  "estimated_duration": 0,
+  "phases": [
+    {
+      "name": "Backup Phase",
+      "duration_estimate": "5-10 minutes",
+      "tasks": [
+        "Create backup directory",
+        "Copy original files to backup",
+        "Verify backup integrity"
+      ]
+    },
+    {
+      "name": "Migration Phase",
+      "duration_estimate": "10-30 minutes",
+      "tasks": [],
+      "file_migrations": [
+        {
+          "source_file": "data/sample_customers.csv",
+          "target_format": "parquet",
+          "estimated_time": 0.002264404296875,
+          "compression": "snappy"
+        },
+        {
+          "source_file": "data/sample_orders.csv",
+          "target_format": "parquet",
+          "estimated_time": 0.0006867408752441406,
+          "compression": "snappy"
+        },
+        {
+          "source_file": "data/ecommerce_sample.csv",
+          "target_format": "parquet",
+          "estimated_time": 0.10276021957397462,
+          "compression": "snappy"
+        }
+      ]
+    },
+    {
+      "name": "Validation Phase",
+      "duration_estimate": "5-15 minutes",
+      "tasks": [
+        "Validate data integrity",
+        "Compare record counts",
+        "Performance testing",
+        "Update documentation"
+      ]
+    }
+  ]
+}
