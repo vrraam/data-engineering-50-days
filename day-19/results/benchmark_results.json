@@ -1,0 +1,30 @@
+{
+  "csv": {
+    "write_time": 0.02543807029724121,
+    "read_time": 0.011487960815429688,
+    "file_size_bytes": 1072917,
+    "file_size_mb": 1.0232133865356445,
+    "file_path": "data/ecommerce_test.csv"
+  },
+  "json": {
+    "write_time": 0.01302790641784668,
+    "read_time": 0.03189492225646973,
+    "file_size_bytes": 2668411,
+    "file_size_mb": 2.544795036315918,
+    "file_path": "data/ecommerce_test.json"
+  },
+  "parquet": {
+    "write_time": 0.1678178310394287,
+    "read_time": 0.17173218727111816,
+    "file_size_bytes": 378275,
+    "file_size_mb": 0.3607511520385742,
+    "file_path": "data/ecommerce_test.parquet"
+  },
+  "excel": {
+    "write_time": 1.2899410724639893,
+    "read_time": 0.8474891185760498,
+    "file_size_bytes": 681189,
+    "file_size_mb": 0.649632453918457,
+    "file_path": "data/ecommerce_test.xlsx"
+  }
+}
